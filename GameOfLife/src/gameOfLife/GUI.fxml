@@ -55,7 +55,6 @@
             	<Button mnemonicParsing="false" onAction="#onSave" text="Save" />
             	<Button mnemonicParsing="false" onAction="#onLoadGliders" text="Glider" />
              
-             
              -->
             
             <Button mnemonicParsing="false" onAction="#onClear" text="Clear" />
