@@ -1,0 +1,23 @@
+.root{
+	-fx-font-size: 12px;
+}
+
+.rect-alive-under{
+	-fx-fill: Blue; 
+	-fx-stroke: Gray; 
+}
+
+.rect-alive-normal{
+	-fx-fill: Green; 
+	-fx-stroke: Gray; 
+}
+
+.rect-alive-over{
+	-fx-fill: Red; 
+	-fx-stroke: Gray; 
+}
+
+.rect-empty{
+	-fx-fill: White;
+	-fx-stroke: Gray;
+}

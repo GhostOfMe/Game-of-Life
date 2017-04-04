@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameOfLife.Controller">
+   <top>
+      <MenuBar prefHeight="22.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Game">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onRandomize" text="Randomize" />
+                  <MenuItem mnemonicParsing="false" onAction="#onClear" text="Clear" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false" text="Presets">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#onLoadGliders" text="Gliders" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#onClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Theme">
+            <items>
+                  <RadioMenuItem mnemonicParsing="false" onAction="#onSelectDefaultStyle" selected="true" text="Default">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="theme_css" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" onAction="#onSelectCaveStyle" text="Cave" toggleGroup="$theme_css" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onAbout" text="About..." />
+                  <MenuItem mnemonicParsing="false" onAction="#onRules" text="Rules..." />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="22.0" prefWidth="640.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <!-- 
+            	
+            	<Button mnemonicParsing="false" onAction="#onSave" text="Save" />
+            	<Button mnemonicParsing="false" onAction="#onLoadGliders" text="Glider" />
+             
+             
+             -->
+            
+            <Button mnemonicParsing="false" onAction="#onClear" text="Clear" />
+            <Button mnemonicParsing="false" onAction="#onStart" text="Start" />
+            <Button mnemonicParsing="false" onAction="#onStop" text="Stop" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
