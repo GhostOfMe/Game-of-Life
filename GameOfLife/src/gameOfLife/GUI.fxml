@@ -54,11 +54,7 @@
             	
             	<Button mnemonicParsing="false" onAction="#onSave" text="Save" />
             	<Button mnemonicParsing="false" onAction="#onLoadGliders" text="Glider" />
-<<<<<<< HEAD
-             
-=======
-                 
->>>>>>> HEAD@{3}
+
              -->
             
             <Button mnemonicParsing="false" onAction="#onClear" text="Clear" />
