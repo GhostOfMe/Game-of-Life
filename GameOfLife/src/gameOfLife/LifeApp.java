@@ -1,7 +1,11 @@
 package gameOfLife;
 
+import java.awt.image.BufferedImage;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -158,17 +162,31 @@ public class LifeApp extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		BorderPane root = FXMLLoader.load(getClass().getResource("GUI.fxml"));
+		BorderPane root = FXMLLoader.load(getClass().getResource("/gameOfLife/res/GUI.fxml"));
 		
 		Scene scene = new Scene(root);	
 		root.setCenter(createContent());
 		
-		scene.getStylesheets().add("gameOfLife/css/default.css");
+		scene.getStylesheets().add("gameOfLife/res/default.css");
 		
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Conway's Game of Life");
-		primaryStage.getIcons().add(new Image("gameOfLife/icon.png"));
+		
+		//BufferedImage icon = ImageIO.read(ResourceLoader.load("icon.png"));
+		//primaryStage.getIcons().add(icon);
+		Image icon = new Image("file:res/icon.png");
+		if (icon.isError()){
+			System.out.println("NULL");
+			icon = new Image("file:icon.png");
+		}
+		System.out.println(icon);
+		primaryStage.getIcons().add(icon);
+
+
+
 		primaryStage.setResizable(false);
+		
+		
 		
 		primaryStage.show();
 		

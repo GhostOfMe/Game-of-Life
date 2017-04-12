@@ -36,13 +36,13 @@ public class Controller implements Initializable{
     @FXML
     void onSelectCaveStyle(ActionEvent event) {
     	scene.getStylesheets().clear();
-    	scene.getStylesheets().add("gameOfLife/css/cave.css");
+    	scene.getStylesheets().add("gameOfLife/res/cave.css");
     }
     
     @FXML
     void onSelectDefaultStyle(ActionEvent event) {
     	scene.getStylesheets().clear();
-    	scene.getStylesheets().add("gameOfLife/css/default.css");
+    	scene.getStylesheets().add("gameOfLife/res/default.css");
     }
     
 
