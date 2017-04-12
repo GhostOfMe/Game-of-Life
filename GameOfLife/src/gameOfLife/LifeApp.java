@@ -174,9 +174,8 @@ public class LifeApp extends Application{
 		
 		//BufferedImage icon = ImageIO.read(ResourceLoader.load("icon.png"));
 		//primaryStage.getIcons().add(icon);
-		Image icon = new Image("file:res/icon.png");
+		Image icon = new Image("file:src/gameOfLife/res/icon.png");
 		if (icon.isError()){
-			System.out.println("NULL");
 			icon = new Image("file:icon.png");
 		}
 		System.out.println(icon);
