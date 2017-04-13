@@ -172,15 +172,18 @@ public class LifeApp extends Application{
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Conway's Game of Life");
 		
-		//BufferedImage icon = ImageIO.read(ResourceLoader.load("icon.png"));
-		//primaryStage.getIcons().add(icon);
-		Image icon = new Image("file:src/gameOfLife/res/icon.png");
-		if (icon.isError()){
-			icon = new Image("file:icon.png");
+		// try-catch block to set up application error
+		try{
+			// for jar file
+			primaryStage.getIcons().add(
+				   new Image(
+				      LifeApp.class.getResource( "/images/icon.png" ).toExternalForm())); 
+		} catch (NullPointerException ex){
+			//for eclipse
+			primaryStage.getIcons().add(
+					   new Image(
+					      LifeApp.class.getResource( "/gameOfLife/res/icon.png" ).toExternalForm()));
 		}
-		System.out.println(icon);
-		primaryStage.getIcons().add(icon);
-
 
 
 		primaryStage.setResizable(false);
