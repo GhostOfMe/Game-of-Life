@@ -2,4 +2,4 @@
 
 "Conway's Game of Life" implementation written on Java.
 
-![]({{site.baseurl}}//life_css1.png)
+[jar file](https://github.com/GhostOfMe/Game-of-Life/tree/master/GameOfLife/jar/Game%20of%20Life)
